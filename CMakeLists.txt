@@ -3,7 +3,9 @@ project(ImageBasedModellingEdu)
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/" ${CMAKE_MODULE_PATH})
 
 # Eigen (required)
-find_package(Eigen REQUIRED)
+# 手动指定Eigen的路径
+set(EIGEN_INCLUDE_DIRS "C:/Users/m30040020/tools/cppPrebuildLibs/eigen-3.4.0")
+# find_package(Eigen REQUIRED)
 include_directories(${EIGEN_INCLUDE_DIRS})
 add_definitions(-DEIGEN_USE_NEW_STDVECTOR -DEIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET)
 

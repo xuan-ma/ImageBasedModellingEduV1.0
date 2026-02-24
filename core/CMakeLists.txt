@@ -3,27 +3,33 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS "-fPIC")
 
 
-# find linpng
-find_package(PNG REQUIRED)
-if(PNG_FOUND)
-    message("PNG found: ${PNG_LIBRARIES}")
-    include_directories(${PNG_INCLUDE_DIRS})
-    add_definitions(${PNG_DEFINITIONS})
-endif()
+# find libpng
+set(PNG_INCLUDE_DIRS "C:/Users/m30040020/tools/cppPrebuildLibs/libpng-1.6.55/libpng-install/include")
+set(PNG_LIBRARIES "C:/Users/m30040020/tools/cppPrebuildLibs/libpng-1.6.55/libpng-install/lib/libpng16.dll.a")
+# find_package(PNG REQUIRED)
+# if(PNG_FOUND)
+message("PNG found: ${PNG_LIBRARIES}")
+include_directories(${PNG_INCLUDE_DIRS})
+add_definitions(${PNG_DEFINITIONS})
+# endif()
 
 # find libjpeg
-find_package(JPEG REQUIRED)
-if(JPEG_FOUND)
-    message("JPEG found: ${JPEG_LIBRARIES}")
-    include_directories(${JPEG_INCLUDE_DIR})
-endif()
+set(JPEG_INCLUDE_DIR "C:/Users/m30040020/tools/cppPrebuildLibs/libjpeg-turbo-3.1.3/install/include")
+set(JPEG_LIBRARIES "C:/Users/m30040020/tools/cppPrebuildLibs/libjpeg-turbo-3.1.3/install/lib/libjpeg.dll.a")
+# find_package(JPEG REQUIRED)
+# if(JPEG_FOUND)
+message("JPEG found: ${JPEG_LIBRARIES}")
+include_directories(${JPEG_INCLUDE_DIR})
+# endif()
 
 # find libtiff
-find_package(TIFF REQUIRED)
-if(TIFF_FOUND)
-    message("TIFF found: ${TIFF_LIBRARIES}")
-    include_directories(${TIFF_INCLUDE_DIR})
-endif()
+set(TIFF_INCLUDE_DIR "C:/Users/m30040020/tools/cppPrebuildLibs/tiff-4.5.1/install/include")
+set(TIFF_LIBRARIES "C:/Users/m30040020/tools/cppPrebuildLibs/tiff-4.5.1/install/lib/libtiff.dll.a")
+# find_package(TIFF REQUIRED)
+# if(TIFF_FOUND)
+message("TIFF found: ${TIFF_LIBRARIES}")
+include_directories(${TIFF_INCLUDE_DIR})
+# endif()
 
 include_directories("..")
 set(HEADERS
