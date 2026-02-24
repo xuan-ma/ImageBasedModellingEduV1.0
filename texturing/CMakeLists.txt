@@ -59,7 +59,7 @@ set(SOURCE_FILES
         timer.cpp
         )
 add_library(texturing ${HEADERS} ${SOURCE_FILES})
-#target_link_libraries(sfm core util features)
+target_link_libraries(texturing core util sfm features)
 
 #file (GLOB HEADERS "*.h")
 #file (GLOB SOURCES "[^_]*.cpp")
