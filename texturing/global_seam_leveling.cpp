@@ -10,6 +10,7 @@
 #include <map>
 #include <set>
 
+#include <cmath>
 #include <util/timer.h>
 #include <math/accum.h>
 #include <Eigen/SparseCore>
@@ -18,6 +19,8 @@
 #include "texturing.h"
 #include "seam_leveling.h"
 #include "progress_counter.h"
+
+using std::isnan;
 
 TEX_NAMESPACE_BEGIN
 
